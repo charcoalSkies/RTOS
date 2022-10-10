@@ -185,7 +185,7 @@ static void Task1( void const *pvParameters )
 		코드를 실행 하여 보고
 		vTaskDelay() 코드를 주석 처리한 후 그 결과를 설명한다 */
 #if 1 // No comment
-vTaskDelay (pdMS_TO_TICKS (1000)); // 1ms 동안 blocked, 1ms 후 ready (얘덕분에 멀티태스킹 가능) 블럭 상태 동안 다른 Task실행
+vTaskDelay (pdMS_TO_TICKS (1000)); // 1000ms 동안 blocked, 1000ms 후 ready (얘덕분에 멀티태스킹 가능) 블럭 상태 동안 다른 Task실행
 // running은 비어있으면 안되므로 task 가 없다면(task 공백기가 생겼다면) Idle Task실행(우선순위 0번) vApplicationIdleHook 로 사용자가 작업 지정 가능
 
 // 우선순위가 높다고 가장 오래 실행되는것이 아님
