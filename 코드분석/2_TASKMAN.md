@@ -286,7 +286,6 @@ void YourTask(void *pvParameters)
 
 // 3. TASK 생성
 ------------------------------------------------
-
 // TASK CREATE
 #include “FreeRTOS.h”
 #include “task.h”
@@ -321,7 +320,6 @@ vTaskSuspend( xHandle1 );
 
 // 5. vTaskResume
 ------------------------------------------------
-
 vTaskSuspend( xHandle1 );
 
 ㅁ 일시정지된 태스크를 다시 실행시킴
@@ -354,7 +352,6 @@ void vAFunction( void )
 
 // 6. vTaskPrioritySet
 ------------------------------------------------
-
 // TASK_1_PRIO(기존) -> TASK_3_PRIO
 // xHandle1에 할당된 TASK의 우선순위를 TASK_3_PRIO로 변경
 vTaskPrioritySet(xHandle1, TASK_3_PRIO); 
@@ -375,7 +372,6 @@ vTaskResume(xHandle1);	// blocked -> ready
 
 // 7. vTaskDelay
 ------------------------------------------------
-
 // vTaskDelay 덕분에 멀티태스킹 가능
 // vTaskDelay를 사용하지 않으면 선점중인 태스크만 실행하고 다른 태스크를 실행할 수 없음
 vTaskDelay (pdMS_TO_TICKS (1)); 
@@ -391,7 +387,6 @@ vTaskDelay (pdMS_TO_TICKS (1));
 
 // 8. vTaskDelete
 ------------------------------------------------
-
 /* delete self task */
 vTaskDelete (xHandleMain);
 
